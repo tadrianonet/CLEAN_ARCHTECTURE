@@ -1,9 +1,9 @@
+// src/presentation/controllers/HealthController.js
+const express = require('express');
+const router = express.Router();
 
-class HealthController {
-    healthCheck(req, res) {
-      res.status(200).json({ status: 'ok' });
-    }
-  }
-  
-  module.exports = HealthController;
-  
+router.get('/health', (req, res) => {
+    res.status(200).json({ status: 'UP' });
+});
+
+module.exports = router;
